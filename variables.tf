@@ -20,8 +20,8 @@ EOT
     name                      = string
     resource_group_name       = string
     stream_analytics_job_name = string
-    batch_max_count           = optional(number, 100)
-    batch_max_in_bytes        = optional(number, 262144)
+    batch_max_count           = optional(number) # Default: 100
+    batch_max_in_bytes        = optional(number) # Default: 262144
   }))
 }
 
