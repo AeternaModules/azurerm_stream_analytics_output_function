@@ -1,3 +1,7 @@
+output "stream_analytics_output_functions_id" {
+  description = "Map of id values across all stream_analytics_output_functions, keyed the same as var.stream_analytics_output_functions"
+  value       = { for k, v in azurerm_stream_analytics_output_function.stream_analytics_output_functions : k => v.id }
+}
 output "stream_analytics_output_functions_api_key" {
   description = "Map of api_key values across all stream_analytics_output_functions, keyed the same as var.stream_analytics_output_functions"
   value       = { for k, v in azurerm_stream_analytics_output_function.stream_analytics_output_functions : k => v.api_key }
