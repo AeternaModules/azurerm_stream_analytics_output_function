@@ -3,8 +3,8 @@ variable "stream_analytics_output_functions" {
 Map of stream_analytics_output_functions, attributes below
 Required:
     - api_key
-    - api_key_key_vault_id (alternative to api_key - read from Key Vault instead)
-    - api_key_key_vault_secret_name (alternative to api_key - read from Key Vault instead)
+    - api_key_key_vault_id (optional, alternative to api_key)
+    - api_key_key_vault_secret_name (optional, alternative to api_key)
     - function_app
     - function_name
     - name
@@ -24,8 +24,8 @@ EOT
     name                          = string
     resource_group_name           = string
     stream_analytics_job_name     = string
-    batch_max_count               = optional(number) # Default: 100
-    batch_max_in_bytes            = optional(number) # Default: 262144
+    batch_max_count               = optional(number)
+    batch_max_in_bytes            = optional(number)
   }))
 }
 
